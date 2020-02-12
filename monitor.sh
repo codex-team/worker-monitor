@@ -4,8 +4,7 @@
 qty=$1
 
 # Check number of connections to rabbitmq
-connections=$(rabbitmqctl list_connections | tail -n +1)
-working=$(echo $connections | wc -l)
+working=$(rabbitmqctl list_connections | tail -n +2 | wc -l)
 
 # Compare with overally number of workers
 # If some workers are not connected, send notification
