@@ -47,8 +47,8 @@ done
 shift $((OPTIND - 1))
 
 # Check number of connections to rabbitmq
-#working=$(rabbitmqctl list_connections | tail -n +2 | wc -l)
-working=1
+working=$(rabbitmqctl list_connections | tail -n +2 | wc -l)
+
 # Compare with overally number of workers
 # If some workers are not connected, send notification
 if (( $qty>$working )); then
