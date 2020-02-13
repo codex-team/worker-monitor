@@ -13,6 +13,6 @@ where:
 
 Install into your crontab file:
 
-```shell
+```
 <time interval in cron format> monitor.sh -w <number of workers> -i <chat id>
 ```
